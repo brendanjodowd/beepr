@@ -136,6 +136,16 @@ beep_on_error <- function(expr, sound = 1) {
   })
 }
 
+beep_T_F <- function(expr) {
+
+  if(expr==T){
+    beep(1)
+  }else{
+    beep(9)
+  }
+  
+}
+
 is_wav_fname <- function(fname) {
   str_detect(fname, regex("\\.wav$", ignore_case = TRUE))
 }
